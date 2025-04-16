@@ -1,6 +1,6 @@
 function Employment({ employment, onChange, addEmployment, deleteEmployment }) {
   return (
-    <div className="">
+    <>
       <h2>Employment History</h2>
       {employment.map((employment, index) => (
         <div key={employment.id} className="employment">
@@ -17,7 +17,7 @@ function Employment({ employment, onChange, addEmployment, deleteEmployment }) {
             placeholder="Title"
             onChange={(e) => onChange(employment.id, e)}
           />
-          <input
+          <textarea
             name="responsibility"
             value={employment.responsibility}
             placeholder="Responsibility"
@@ -41,7 +41,7 @@ function Employment({ employment, onChange, addEmployment, deleteEmployment }) {
         </div>
       ))}
       <button onClick={() => addEmployment()}>+</button>
-    </div>
+      </>
   );
 }
 

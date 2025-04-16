@@ -109,6 +109,7 @@ function App() {
     );
   }
   // Employment end
+  
 
   return (
     <>
@@ -122,7 +123,7 @@ function App() {
           </button>
           <button onClick={() => setDisplayInput("work")}>Work</button>
         </div>
-        <div>
+        <div className="input-area">
           {displayInput == "personal" && (
             <>
               <Personal

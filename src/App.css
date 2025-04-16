@@ -1,6 +1,6 @@
 .page {
   display: grid;
-  grid-template-columns: 0.3fr 1fr 1fr;
+  grid-template-columns: 0.3fr 1fr 1.5fr;
   justify-items: center;
 }
 
@@ -16,11 +16,14 @@
 .navigation-btns {
 }
 
+.input-area {
+  max-width: 100%;
+}
 .navigation-btns button {
   margin: 0.5em;
   padding: 0.5em;
   width: 100%;
-  max-width: 145px;
+  max-width: 120px;
   border-color: black;
   transition: background-color 0.2s;
 }
@@ -30,4 +33,18 @@
 }
 
 .preview {
+  border: 1px solid black;
+  border-radius: 1em;
+  text-align: center;
+  max-width: 100%;
+  padding: 1em;
+}
+
+.personal-preview {
+}
+
+textarea {
+  width: 100%;
+  display: block;
+  resize: vertical;
 }

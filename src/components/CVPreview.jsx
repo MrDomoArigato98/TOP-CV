@@ -2,7 +2,7 @@
 function CVPreview({ personalInfo, education, employment }) {
   return (
     <>
-      <div>
+      <div className="personal-preview">
         <h2>{personalInfo.fullName}</h2>
         <p>{personalInfo.email}</p>
         <p>{personalInfo.phone}</p>
