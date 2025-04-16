@@ -1,15 +1,36 @@
-.test {
-  display: flex;
-  text-align: center;
-  justify-content: space-around;
+.page {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
 }
 
-.personal-info{
+.personal-info {
   display: flex;
   flex-direction: column;
 }
 
-.education{
+.education {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.navigation-btns {
+}
+
+.navigation-btns button {
+  margin: 0.5em;
+  padding: 0.5em;
+  width: 100%;
+  max-width: 145px;
+  border-color: black;
+  transition: background-color 0.2s;
+}
+
+.navigation-btns button:hover {
+  background-color: wheat;
+}
+
+.preview {
 }

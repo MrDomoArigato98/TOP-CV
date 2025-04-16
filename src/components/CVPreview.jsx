@@ -1,5 +1,5 @@
 //Could use (props) here, but I know the destructured valeus coming in
-function CVPreview({ personalInfo, educationExperience }) {
+function CVPreview({ personalInfo, education }) {
   return (
     <>
       <div>
@@ -8,11 +8,16 @@ function CVPreview({ personalInfo, educationExperience }) {
         <p>{personalInfo.phone}</p>
       </div>
 
-      <div>
-        <h2>{educationExperience.schoolName}</h2>
-        <h2>{educationExperience.courseTitle}</h2>
-        <p>{educationExperience.startDate}</p>
-        <p>{educationExperience.endDate}</p>
+      <div className="education-preview">
+        {education.map((item) => (
+          <div className="education-cv" key={item.id}>
+            {console.log(item)}
+            <h2>{item.schoolName}</h2>
+            <h2>{item.courseTitle}</h2>
+            <p>{item.startDate}</p>
+            <p>{item.endDate}</p>
+          </div>
+        ))}
       </div>
     </>
   );
