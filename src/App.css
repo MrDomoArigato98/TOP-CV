@@ -47,8 +47,6 @@ button {
   font-weight: bold;
   border: 1px solid grey;
 }
-.navigation-btns {
-}
 
 .active {
   background-color: coral;
@@ -56,7 +54,6 @@ button {
 
 .input-area {
   min-width: 80%;
-  text-align: center;
 }
 
 .error{
@@ -130,7 +127,6 @@ textarea {
 }
 .add-btn {
   transition: background-color 0.2s;
-  width: 100%;
 }
 .add-btn:hover {
   background-color: lightgreen;
