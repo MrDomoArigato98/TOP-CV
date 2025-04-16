@@ -1,6 +1,8 @@
 # [The Odin Project: CV Application](https://www.theodinproject.com/lessons/node-path-react-new-cv-application)
 
 ## What I've learned
+-  I had no clue on how to get started at the beginning, so I used other people's examples to begin things. I'm still at the point where it's very though to do things on my own with this, but I'm getting there.
+
 - Difficult at first to grasp how everything has a "State", modifying it, updating it, passing it to other components as a prop. I'm still gathering my head around this one.
 
 - I still don't know the right "Best-Practices" but I guess I will learn this as I go and make mistakes.
@@ -8,6 +10,8 @@
 - The ```onChange``` .. ```onClick``` among the other things that can be done, figuring out how to properly use these. Having functions passed as props to use in parent elements.
 
 - Especially tough having dynamic elements, and states that can have parts added to it (Including HTML that is added once you map over a list). Using ```fn.map()``` and ```fn.filter``` to add, modify and remove elements from list - which then update the State.
+
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
