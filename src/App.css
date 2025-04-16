@@ -33,6 +33,12 @@ button {
 .input-area {
   min-width: 80%;
 }
+
+.error{
+  color: red;
+  font-weight: bold;
+}
+
 .navigation-btns button {
   margin: 0.5em;
   padding: 0.5em;

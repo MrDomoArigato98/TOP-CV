@@ -16,9 +16,34 @@ function App() {
     phone: "+35308291823",
   });
 
+  const [errors, setErrors] = useState({});
+
   function handlePersonalChange(e) {
     const { name, value } = e.target;
     setPersonalInfo((prevPersonal) => ({ ...prevPersonal, [name]: value }));
+
+    let newErrors = { ...errors };
+
+    if (name === "email") {
+      if (!value.trim()) {
+        newErrors.email = "Email is Required";
+      } else if (!/\S+@\S+\.\S+/.test(value)) {
+        newErrors.email = "Invalid email address";
+      } else {
+        delete newErrors.email;
+      }
+    }
+    
+    if (name === "phone") {
+      if (!value.trim()) {
+        newErrors.phone = "Phone Number is required";
+      } else if (!/^\+?\d{5,15}$/.test(value)) {
+        newErrors.phone = "Phone number is invalid.";
+      } else {
+        delete newErrors.phone;
+      }
+    }
+    setErrors(newErrors);
   }
   // Personal Info End
 
@@ -68,7 +93,8 @@ function App() {
       id: 1,
       companyName: "AWS",
       title: "Cloud Support Engineer II",
-      responsibility: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima, perferendis fugiat assumenda fugit molestias repellendus. Molestias aperiam sunt numquam ducimus voluptates sit vero aliquid explicabo error velit, quaerat necessitatibus!",
+      responsibility:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima, perferendis fugiat assumenda fugit molestias repellendus. Molestias aperiam sunt numquam ducimus voluptates sit vero aliquid explicabo error velit, quaerat necessitatibus!",
       startDate: "01/07/2020",
       endDate: "24/11/2024",
     },
@@ -109,7 +135,6 @@ function App() {
     );
   }
   // Employment end
-  
 
   return (
     <>
@@ -129,6 +154,7 @@ function App() {
               <Personal
                 personalInfo={personalInfo}
                 handlePersonalChange={handlePersonalChange}
+                errors={errors}
               />
             </>
           )}
