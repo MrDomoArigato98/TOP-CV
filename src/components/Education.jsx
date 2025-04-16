@@ -3,7 +3,6 @@ function Education({
   onChange,
   addEducation,
   deleteEducation,
-  errors,
 }) {
   return (
     <>

@@ -11,15 +11,15 @@ function CVPreview({ personalInfo, education, employment }) {
               version="1.1"
               id="Capa_1"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
               viewBox="0 0 483.3 483.3"
-              xml:space="preserve"
+              xmlSpace="preserve"
             >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></g>
               <g id="SVGRepo_iconCarrier">
                 {" "}
@@ -42,15 +42,15 @@ function CVPreview({ personalInfo, education, employment }) {
               version="1.1"
               id="Capa_1"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
               viewBox="0 0 473.806 473.806"
-              xml:space="preserve"
+              xmlSpace="preserve"
             >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></g>
               <g id="SVGRepo_iconCarrier">
                 {" "}
@@ -93,8 +93,6 @@ function CVPreview({ personalInfo, education, employment }) {
             <h3>{item.title}</h3>
             <p>Start: {item.startDate}</p>
             <p>End: {item.endDate}</p>
-            {console.log(item.endDate)}
-            {console.log(typeof(item.endDate))}
             <p className="responsibility">Responsibilities:</p>
             <p>{item.responsibility}</p>
           </div>

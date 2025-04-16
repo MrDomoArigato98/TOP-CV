@@ -53,8 +53,8 @@ function App() {
       id: 1,
       schoolName: "Technological University Dublin",
       courseTitle: "Computer Science Infrastructure",
-      startDate: "16/09/2016",
-      endDate: "01/05/2020",
+      startDate: "2016-09-16",
+      endDate: "2020-05-01",
     },
   ]);
 
@@ -95,8 +95,8 @@ function App() {
       title: "Cloud Support Engineer II",
       responsibility:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima, perferendis fugiat assumenda fugit molestias repellendus. Molestias aperiam sunt numquam ducimus voluptates sit vero aliquid explicabo error velit, quaerat necessitatibus!",
-      startDate: "01/07/2020",
-      endDate: "24/11/2024",
+      startDate: "2020-07-01",
+      endDate: "2024-11-24",
     },
     {
       id: 2,
@@ -104,8 +104,8 @@ function App() {
       title: "Customer Assistant",
       responsibility:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima, perferendis fugiat assumenda fugit molestias repellendus. Molestias aperiam sunt numquam ducimus voluptates sit vero aliquid explicabo error velit, quaerat necessitatibus!",
-      startDate: "09/09/2016",
-      endDate: "25/03/2020",
+      startDate: "2016-09-06",
+      endDate: "2020-03-25",
     },
   ]);
 
