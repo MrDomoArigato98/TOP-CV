@@ -4,6 +4,7 @@ import "./App.css";
 import Personal from "./components/Personal.jsx";
 import CVPreview from "./components/CVPreview.jsx";
 import Education from "./components/Education.jsx";
+import Employment from "./components/Employment.jsx";
 
 function App() {
   // personal OR education OR work
@@ -61,6 +62,54 @@ function App() {
   }
   //Education Experience EndŪ
 
+  //Employment begin
+  const [employment, setEmployment] = useState([
+    {
+      id: 1,
+      companyName: "",
+      title: "",
+      responsibility: "",
+      startDate: "",
+      endDate: "",
+    },
+  ]);
+
+  function handleAddEmployment() {
+    setEmployment([
+      ...employment,
+      {
+        id: Date.now(),
+        companyName: "",
+        title: "",
+        responsibility: "",
+        startDate: "",
+        endDate: "",
+      },
+    ]);
+  }
+
+  function handleChangeEmployment(id, e) {
+    const { name, value } = e.target;
+    /*
+    This is the same as:
+      const name = e.target.name;
+      const value = e.target.value
+    */
+
+    setEmployment((prevEmployment) =>
+      prevEmployment.map((employment) =>
+        employment.id === id ? { ...employment, [name]: value } : employment
+      )
+    );
+  }
+
+  function handleDeleteEmployment(id) {
+    setEmployment((prevEmployment) =>
+      prevEmployment.filter((employment) => employment.id !== id)
+    );
+  }
+  // Employment end
+
   return (
     <>
       <div className="page">
@@ -90,13 +139,21 @@ function App() {
               deleteEducation={handleDeleteEducation}
             />
           )}
-          {displayInput == "work" && <div> </div>}
+          {displayInput == "work" && (
+            <Employment
+              employment={employment}
+              onChange={handleChangeEmployment}
+              addEmployment={handleAddEmployment}
+              deleteEmployment={handleDeleteEmployment}
+            />
+          )}
         </div>
         {/* We can maybe hide this somewhere ? */}
         <div className="preview">
           <CVPreview
             personalInfo={personalInfo}
             education={education}
+            employment={employment}
           />
         </div>
       </div>

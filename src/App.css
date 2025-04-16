@@ -2,18 +2,15 @@
   display: grid;
   grid-template-columns: 0.3fr 1fr 1fr;
   justify-items: center;
-  align-items: center;
 }
 
-.personal-info {
+.education,
+.personal-info,
+.employment {
   display: flex;
   flex-direction: column;
-}
-
-.education {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
+  gap: 0.5em;
 }
 
 .navigation-btns {
