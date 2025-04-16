@@ -35,10 +35,10 @@ function Education({ education, onChange, addEducation, deleteEducation }) {
             onChange={(e) => onChange(item.id, e)}
           ></input>
 
-          <button onClick={() => deleteEducation(item.id)}> - </button>
+          <button className="del-btn" onClick={() => deleteEducation(item.id)}> Remove </button>
         </div>
       ))}
-      <button onClick={addEducation}> + </button>
+      <button className="add-btn" onClick={addEducation}> Add more </button>
     </>
   );
 }

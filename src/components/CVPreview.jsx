@@ -33,12 +33,14 @@ function CVPreview({ personalInfo, education, employment }) {
       <div className="employment-preview">
         <h2>Employment History: </h2>
         {employment.map((item) => (
-          <div className="education-cv" key={item.id}>
+          <div className="employment-cv" key={item.id}>
             <h2>{item.companyName}</h2>
             <h3>{item.title}</h3>
+            <p>Start: {item.startDate}</p>
+            <p>End: {item.endDate}</p>
+            <p className="responsibility">Responsibilities:</p>
             <p>{item.responsibility}</p>
-            <p>{item.startDate}</p>
-            <p>{item.endDate}</p>
+            
           </div>
         ))}
       </div>

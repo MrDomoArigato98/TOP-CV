@@ -11,9 +11,9 @@ function App() {
   const [displayInput, setDisplayInput] = useState("personal");
 
   const [personalInfo, setPersonalInfo] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
+    fullName: "John Bloggs",
+    email: "definitelyRealEmail@gmail.com",
+    phone: "+35308291823",
   });
 
   function handlePersonalChange(e) {
@@ -26,10 +26,10 @@ function App() {
   const [education, setEducation] = useState([
     {
       id: 1,
-      schoolName: "Test",
-      courseTitle: "test",
-      startDate: "",
-      endDate: "",
+      schoolName: "Technological University Dublin",
+      courseTitle: "Computer Science Infrastructure",
+      startDate: "16/09/2016",
+      endDate: "01/05/2020",
     },
   ]);
 
@@ -66,11 +66,11 @@ function App() {
   const [employment, setEmployment] = useState([
     {
       id: 1,
-      companyName: "",
-      title: "",
-      responsibility: "",
-      startDate: "",
-      endDate: "",
+      companyName: "AWS",
+      title: "Cloud Support Engineer II",
+      responsibility: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima, perferendis fugiat assumenda fugit molestias repellendus. Molestias aperiam sunt numquam ducimus voluptates sit vero aliquid explicabo error velit, quaerat necessitatibus!",
+      startDate: "01/07/2020",
+      endDate: "24/11/2024",
     },
   ]);
 

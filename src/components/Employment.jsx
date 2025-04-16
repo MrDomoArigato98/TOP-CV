@@ -37,10 +37,10 @@ function Employment({ employment, onChange, addEmployment, deleteEmployment }) {
             placeholder="Employment end date"
             onChange={(e) => onChange(employment.id, e)}
           />
-          <button onClick={() => deleteEmployment(employment.id)}>-</button>
+          <button className="del-btn" onClick={() => deleteEmployment(employment.id)}>Remove</button>
         </div>
       ))}
-      <button onClick={() => addEmployment()}>+</button>
+      <button className="add-btn" onClick={() => addEmployment()}>Add more</button>
       </>
   );
 }

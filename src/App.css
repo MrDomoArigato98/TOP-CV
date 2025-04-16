@@ -1,9 +1,11 @@
+body {
+  background-color: aliceblue;
+}
 .page {
   display: grid;
   grid-template-columns: 0.3fr 1fr 1.5fr;
   justify-items: center;
 }
-
 .education,
 .personal-info,
 .employment {
@@ -11,13 +13,25 @@
   flex-direction: column;
   margin-bottom: 1em;
   gap: 0.5em;
+  max-width: 600px;
 }
-
+input,
+textarea,
+button {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+button {
+  font-weight: bold;
+}
 .navigation-btns {
 }
 
+.active {
+  background-color: coral;
+}
+
 .input-area {
-  max-width: 100%;
+  min-width: 80%;
 }
 .navigation-btns button {
   margin: 0.5em;
@@ -28,17 +42,24 @@
   transition: background-color 0.2s;
 }
 
+button:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
 .navigation-btns button:hover {
   background-color: wheat;
 }
 
 .preview {
-  border: 1px solid black;
+  background-color: white;
   border-radius: 1em;
   text-align: center;
-  max-width: 100%;
+  width: 100%;
   padding: 1em;
   margin: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
 .personal-preview {
@@ -67,6 +88,46 @@ textarea {
   resize: vertical;
 }
 
-.education-cv{
+.education-cv,
+.employment-cv {
   text-align: left;
+}
+.education-cv p {
+  font-style: italic;
+}
+
+.responsibility {
+  font-weight: bold;
+}
+.add-btn {
+  transition: background-color 0.2s;
+}
+.add-btn:hover {
+  background-color: lightgreen;
+}
+.del-btn {
+  transition: background-color 0.2s;
+}
+
+.del-btn:hover {
+  background-color: rgb(251, 124, 124);
+}
+
+@media screen and (max-width: 900px) {
+  .page {
+    display: flex;
+    flex-direction: column;
+  }
+  .input-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .navigation-btns {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
