@@ -1,6 +1,29 @@
 body {
   background-color: aliceblue;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.6s ease-out forwards;
 }
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .page {
   display: grid;
   grid-template-columns: 0.3fr 1fr 1.5fr;
@@ -22,6 +45,7 @@ button {
 }
 button {
   font-weight: bold;
+  border: 1px solid grey;
 }
 .navigation-btns {
 }
@@ -32,6 +56,7 @@ button {
 
 .input-area {
   min-width: 80%;
+  text-align: center;
 }
 
 .error{
@@ -44,7 +69,7 @@ button {
   padding: 0.5em;
   width: 100%;
   max-width: 120px;
-  border-color: black;
+  border-color: grey;
   transition: background-color 0.2s;
 }
 
@@ -53,7 +78,7 @@ button:hover {
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .navigation-btns button:hover {
-  background-color: wheat;
+  background-color: orange;
 }
 
 .preview {
@@ -98,15 +123,14 @@ textarea {
 .employment-cv {
   text-align: left;
 }
-.education-cv p {
-  font-style: italic;
-}
+
 
 .responsibility {
   font-weight: bold;
 }
 .add-btn {
   transition: background-color 0.2s;
+  width: 100%;
 }
 .add-btn:hover {
   background-color: lightgreen;

@@ -33,12 +33,12 @@ function App() {
         delete newErrors.email;
       }
     }
-    
+
     if (name === "phone") {
       if (!value.trim()) {
         newErrors.phone = "Phone Number is required";
       } else if (!/^\+?\d{5,15}$/.test(value)) {
-        newErrors.phone = "Phone number is invalid.";
+        newErrors.phone = "Phone number is invalid";
       } else {
         delete newErrors.phone;
       }
@@ -97,6 +97,15 @@ function App() {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima, perferendis fugiat assumenda fugit molestias repellendus. Molestias aperiam sunt numquam ducimus voluptates sit vero aliquid explicabo error velit, quaerat necessitatibus!",
       startDate: "01/07/2020",
       endDate: "24/11/2024",
+    },
+    {
+      id: 2,
+      companyName: "Tesco",
+      title: "Customer Assistant",
+      responsibility:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima, perferendis fugiat assumenda fugit molestias repellendus. Molestias aperiam sunt numquam ducimus voluptates sit vero aliquid explicabo error velit, quaerat necessitatibus!",
+      startDate: "09/09/2016",
+      endDate: "25/03/2020",
     },
   ]);
 
@@ -164,6 +173,7 @@ function App() {
               onChange={handleEducationChange}
               addEducation={handleAddEducation}
               deleteEducation={handleDeleteEducation}
+              errors={errors}
             />
           )}
           {displayInput == "work" && (
@@ -176,7 +186,7 @@ function App() {
           )}
         </div>
         {/* We can maybe hide this somewhere ? */}
-        <div className="preview">
+        <div className="preview fade-in">
           <CVPreview
             personalInfo={personalInfo}
             education={education}

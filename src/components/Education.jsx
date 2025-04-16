@@ -1,9 +1,15 @@
-function Education({ education, onChange, addEducation, deleteEducation }) {
+function Education({
+  education,
+  onChange,
+  addEducation,
+  deleteEducation,
+  errors,
+}) {
   return (
     <>
-      <h2>Education: </h2>
+      <h2 className="fade-right">Education: </h2>
       {education.map((item, index) => (
-        <div className="education" key={item.id}>
+        <div className="education fade-right" key={item.id}>
           <h2>School {index + 1}</h2>
           <input
             type="text"
@@ -35,10 +41,16 @@ function Education({ education, onChange, addEducation, deleteEducation }) {
             onChange={(e) => onChange(item.id, e)}
           ></input>
 
-          <button className="del-btn" onClick={() => deleteEducation(item.id)}> Remove </button>
+          <button className="del-btn" onClick={() => deleteEducation(item.id)}>
+            {" "}
+            Remove{" "}
+          </button>
         </div>
       ))}
-      <button className="add-btn" onClick={addEducation}> Add more </button>
+      <button className="add-btn fade-right" onClick={addEducation}>
+        {" "}
+        Add more{" "}
+      </button>
     </>
   );
 }

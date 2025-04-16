@@ -2,7 +2,7 @@
 function Personal({ personalInfo, handlePersonalChange, errors }) {
   return (
     <>
-      <div className="personal-info">
+      <div className="personal-info fade-right">
         <h2>Personal Information:</h2>
         <input
           type="text"

@@ -1,9 +1,9 @@
 function Employment({ employment, onChange, addEmployment, deleteEmployment }) {
   return (
     <>
-      <h2>Employment History</h2>
+      <h2 className="fade-right">Employment History: </h2>
       {employment.map((employment, index) => (
-        <div key={employment.id} className="employment">
+        <div key={employment.id} className="employment fade-right">
           <h2>Employment {index + 1}</h2>
           <input
             name="companyName"
@@ -40,7 +40,7 @@ function Employment({ employment, onChange, addEmployment, deleteEmployment }) {
           <button className="del-btn" onClick={() => deleteEmployment(employment.id)}>Remove</button>
         </div>
       ))}
-      <button className="add-btn" onClick={() => addEmployment()}>Add more</button>
+      <button className="add-btn fade-right" onClick={() => addEmployment()}>Add more</button>
       </>
   );
 }
